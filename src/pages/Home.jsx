@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import MovieCard from "../components/MovieCard"
 import '../style/home.scss'
+import { Link } from "react-router-dom"
  
 
 export default function Home() {
@@ -8,7 +9,7 @@ export default function Home() {
     const [search, setSearch] = useState("James Bond")
     const [movie, setMovie] = useState([])
 
-    const baseUrl = `http://www.omdbapi.com/?s=${search}&apikey=`
+    const baseUrl = `http://www.omdbapi.com/?s=${search}&type=movie&apikey=`
     const apiKey = import.meta.env.VITE_APP_API_KEY
     
 
@@ -52,17 +53,17 @@ export default function Home() {
 
         <main>
             <section className="sokefelt">
-                <h1>Forside</h1>
+                <h2>Filmer:</h2>
                 <form onSubmit={handleSubmit}>
                     <label>
-                        Søk etter film
+                        Søk etter film:
                         <input type="search" placeholder="James Bond" onChange={handleChange} minLength={3}/>
                     </label>
                     <button className="btn" onClick={getMovies}>Søk</button>
                 </form>
             </section>
             <section className="movieCards">
-                {movie?.map((movie) => (<MovieCard key={movie.imdbID} movie={movie}/>))}
+                {movie?.map((movie) => (<Link to={movie.imdbID} key={movie.imdbID} ><MovieCard movie={movie} baseUrl={baseUrl}/></Link>))}
             </section>
         </main>
     )

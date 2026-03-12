@@ -7,9 +7,11 @@ export default function MovieCard({movie}){
     return(
 
         <article className="movieArticle">
-            <h3>{Title}</h3>
             <img src={Poster} alt={Title} />
-            <p>{Year}</p>
+            <section className="info">
+                <h3>{Title}</h3>
+                <p>{Year}</p>
+            </section>
         </article>
     )
 }

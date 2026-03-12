@@ -1,29 +1,74 @@
-*{
-    box-sizing: border-box;
+$bg-color: #2e2e2e;
+$text-color: #cacaca;
+$primary-color: #dcdcdc;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+  background-color: $bg-color;
+  color: $text-color;
+}
 
+main {
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 2rem;
+  width: 100%;
+}
 
-.sokefelt{
-    
-    padding: 1rem;
+.sokefelt {
+  text-align: center;
+  margin-bottom: 3rem;
 
-    form{
-        padding: 1rem;
-        
+  h2 {
+    font-size: 2.5rem;
+    color: $primary-color;
+    margin-bottom: 1.5rem;
+  }
+
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap; 
+
+    label {
+      font-weight: 600;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
     }
-}
 
-.movieCards{
-    background-color: white;
-
+    input {
+      padding: 0.8rem 1.2rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      outline: none;
+    }
+  }
 }
 
 .btn {
-  display: inline-block;
-  border: 1px solid #9f9f9f;
-  text-decoration: none;
+  background-color: #2b2a33;
+  color: $text-color;
   padding: 0.8rem 1.8rem;
-  border-radius: 30px;
-  color: #b6b4b4;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+
+.movieCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 1rem 0;
 }

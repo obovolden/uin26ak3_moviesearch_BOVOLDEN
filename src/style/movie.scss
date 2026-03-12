@@ -1,0 +1,58 @@
+$text-color: #333333;
+$primary-color: #2b2d42;
+$card-bg: #ffffff;
+
+main{
+    flex-grow: 1;
+}
+
+.movie-details {
+  max-width: 900px;
+  margin: 4rem auto;
+  padding: 2.5rem;
+  background-color: $card-bg;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px #c8c8c81c;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2rem;
+
+
+  img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 8px;
+    box-shadow: $primary-color;
+    object-fit: cover;
+  }
+
+  .info-container {
+    flex: 1; 
+
+    h1 {
+        color: $primary-color;
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+        line-height: 1.2;
+        }
+  }
+
+  .year {
+      font-size: 1.1rem;
+      color: #666;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid #eee; 
+      padding-bottom: 1rem;
+
+      strong {
+        color: $primary-color;
+      }
+    }
+
+    .plot {
+      font-size: 1.15rem;
+      line-height: 1.6;
+      color: $text-color;
+    }
+}
