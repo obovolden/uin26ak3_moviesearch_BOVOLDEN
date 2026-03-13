@@ -36,6 +36,8 @@ export default function Movie(){
                 <section className="info-container">
                     <h1>{movieData.Title}</h1>
                     <p className="year"><strong>År:</strong> {movieData.Year}</p>
+                    <p><strong>Rangering:</strong> {movieData.imdbRating} / 10</p>
+                    <p><strong>Sjanger:</strong> {movieData.Genre}</p>
                     <p className="plot">{movieData.Plot}</p>
                 </section>
             </article>
